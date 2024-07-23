@@ -1,1 +1,26 @@
-<div class="container"></div>
+<div class="container">
+    <div class="e-card" *ngIf="isDataLoading; else cardBlock">
+        <div style="float:left; padding:0 15px 8px 0">
+          <ejs-skeleton shape="Circle" width="60px"></ejs-skeleton>  
+        </div>
+        <div style="margin:20px 15px 0;overflow: hidden;">
+          <ejs-skeleton width="50%" height="15px"></ejs-skeleton>
+        </div>
+        <div style="margin:20px 0 0;">
+          <ejs-skeleton shape="Rectangle" width="100%" height="250px"></ejs-skeleton>
+        </div>
+      </div>
+      <ng-template #cardBlock>
+        <div class="e-card">
+          <div style="float:left; padding:0 15px 8px 0">
+            <img src="https://ej2.syncfusion.com/react/demos/src/skeleton/images/profile.png" style="height:60px;width:60px;border-radius:50px;">
+          </div>
+          <div style="margin:20px 15px 0;overflow: hidden;">
+            <label id="name" style="font-size: 18px;">Laura Callahan</label>
+          </div>
+          <div style="margin:20px 0 0;">
+            <img src="https://ej2.syncfusion.com/react/demos/src/skeleton/images/post.jpg" height="250px" style="background-size: cover; width: 100%;"/>
+          </div>
+        </div>
+      </ng-template>
+</div>
