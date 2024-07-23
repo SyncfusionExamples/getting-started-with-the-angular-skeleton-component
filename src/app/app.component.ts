@@ -15,7 +15,7 @@ export class AppComponent {
   ngOnInit() {
     setTimeout(()=>{
       this.isDataLoading = false;
-    },9000);
+    },3500);
   }
   title = 'myangularapp';
 }
